@@ -159,10 +159,10 @@ int main(int argc, const char * argv[]) {
         scanf("%i", &number);
         
         while ( number != 0 ) {
-            right_digit = number % 10;
-            NSLog(@"%i", right_digit);
+            right_digit += number % 10;
             number /= 10;
         }
+        NSLog(@"%i", right_digit);
         
     }
     return 0;
