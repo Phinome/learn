@@ -152,17 +152,66 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"Divide : %g", [deskCalc divide: 5.0]);
         
 //      颠倒显示数字的位数
-        int number , right_digit;
+//        int number , right_digit;
+//        
+//        NSLog(@"Enter you Number :" );
+//        
+//        scanf("%i", &number);
+//        
+//        while ( number != 0 ) {
+//            right_digit += number % 10;
+//            number /= 10;
+//        }
+//        NSLog(@"%i", right_digit);
+//        
+//      将输入的数字每一位转换为对应的英文表示
+        long long int number, divider;
         
-        NSLog(@"Enter you Number :" );
+        NSLog(@"Input number:");
+        scanf("%lli", &number);
+        divider = 1;
         
-        scanf("%i", &number);
-        
-        while ( number != 0 ) {
-            right_digit += number % 10;
-            number /= 10;
+        while ((number/divider)>9) {
+            divider*=10;
         }
-        NSLog(@"%i", right_digit);
+        while (divider>=1) {
+            switch (number/divider) {
+                case 1:
+                    NSLog(@"one");
+                    break;
+                case 2:
+                    NSLog(@"two");
+                    break;
+                case 3:
+                    NSLog(@"three");
+                    break;
+                case 4:
+                    NSLog(@"four");
+                    break;
+                case 5:
+                    NSLog(@"five");
+                    break;
+                case 6:
+                    NSLog(@"six");
+                    break;
+                case 7:
+                    NSLog(@"seven");
+                    break;
+                case 8:
+                    NSLog(@"eight");
+                    break;
+                case 9:
+                    NSLog(@"nine");
+                    break;
+                case 0:
+                    NSLog(@"zero");
+                    break;  
+                default:  
+                    break;  
+            }  
+            number%=divider;  
+            divider/=10;  
+        }
         
     }
     return 0;
