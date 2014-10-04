@@ -53,74 +53,74 @@
 @end
  */
 
-@interface Calculator: NSObject
-
-// 累加方法
-
--(void) setAccumulator: (double)    value;
--(void) clear;
--(double)   accumulator;
-
-// 算术方法
-
--(double) add:  (double)    value;
--(double) subtract: (double)  value;
--(double) multiply: (double)  value;
--(double) divide: (double)    value;
--(double) changeSign;
--(double) reciprocal; //累加器
--(double) xSquared;
-
-@end
-
-@implementation Calculator
-{
-    double  accumulator;
-}
-
--(void) setAccumulator: (double)    value
-{
-    accumulator = value;
-}
--(void) clear
-{
-    accumulator = 0;
-}
-
--(double)   accumulator
-{
-    return accumulator;
-}
--(double)   add:    (double)  value
-{
-    return accumulator += value;
-}
--(double)   subtract:   (double)    value
-{
-    return accumulator -= value;
-}
--(double)   multiply:   (double)   value
-{
-    return accumulator *= value;
-}
--(double)   divide: (double)    value
-{
-    return accumulator /= value;
-}
--(double)   changeSign
-{
-    return -accumulator;
-}
--(double)   reciprocal
-{
-    return accumulator;
-}
--(double)   xSquared
-{
-    return accumulator * accumulator;
-}
-
-@end
+//@interface Calculator: NSObject
+//
+//// 累加方法
+//
+//-(void) setAccumulator: (double)    value;
+//-(void) clear;
+//-(double)   accumulator;
+//
+//// 算术方法
+//
+//-(double) add:  (double)    value;
+//-(double) subtract: (double)  value;
+//-(double) multiply: (double)  value;
+//-(double) divide: (double)    value;
+//-(double) changeSign;
+//-(double) reciprocal; //累加器
+//-(double) xSquared;
+//
+//@end
+//
+//@implementation Calculator
+//{
+//    double  accumulator;
+//}
+//
+//-(void) setAccumulator: (double)    value
+//{
+//    accumulator = value;
+//}
+//-(void) clear
+//{
+//    accumulator = 0;
+//}
+//
+//-(double)   accumulator
+//{
+//    return accumulator;
+//}
+//-(double)   add:    (double)  value
+//{
+//    return accumulator += value;
+//}
+//-(double)   subtract:   (double)    value
+//{
+//    return accumulator -= value;
+//}
+//-(double)   multiply:   (double)   value
+//{
+//    return accumulator *= value;
+//}
+//-(double)   divide: (double)    value
+//{
+//    return accumulator /= value;
+//}
+//-(double)   changeSign
+//{
+//    return -accumulator;
+//}
+//-(double)   reciprocal
+//{
+//    return accumulator;
+//}
+//-(double)   xSquared
+//{
+//    return accumulator * accumulator;
+//}
+//
+//@end
 
 //---- program 部分 --
 
@@ -150,6 +150,19 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"Subtract : %g", [deskCalc subtract:50.3]);
 //        NSLog(@"Multiply : %g", [deskCalc multiply: 25.2]);
 //        NSLog(@"Divide : %g", [deskCalc divide: 5.0]);
+        
+//      颠倒显示数字的位数
+        int number , right_digit;
+        
+        NSLog(@"Enter you Number :" );
+        
+        scanf("%i", &number);
+        
+        while ( number != 0 ) {
+            right_digit = number % 10;
+            NSLog(@"%i", right_digit);
+            number /= 10;
+        }
         
     }
     return 0;
