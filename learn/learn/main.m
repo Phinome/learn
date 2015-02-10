@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 
 //---- @interface 部分 ----
+
+@interface Fraction: NSObject
+
+-(void)	print;
+-(void)	setNumberator: (int)	n;
+-(void)	setDenominator: (int) d;
+
+@end
+
 /*
  @interface XYPoint:NSObject
 
@@ -21,6 +30,30 @@
  */
 
 //---- @implementation 部分 ---
+
+@implementation Fraction
+{
+    int numberator;
+    int denominator;
+}
+
+-(void)	print;
+{
+    NSLog(@"%i/%i", numberator, denominator);
+}
+
+-(void)	setNumberator: (int) n
+{
+    numberator = n;
+}
+
+-(void)		setDenominator: (int) d
+{
+    denominator = d;
+}
+
+@end
+
 /*
 @implementation XYPoint
 {
@@ -165,54 +198,66 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"%i", right_digit);
 //        
 //      将输入的数字每一位转换为对应的英文表示
-        long long int number, divider;
+//        long long int number, divider;
+//        
+//        NSLog(@"Input number:");
+//        scanf("%lli", &number);
+//        divider = 1;
+//        
+//        while ((number/divider)>9) {
+//            divider*=10;
+//        }
+//        while (divider>=1) {
+//            switch (number/divider) {
+//                case 1:
+//                    NSLog(@"one");
+//                    break;
+//                case 2:
+//                    NSLog(@"two");
+//                    break;
+//                case 3:
+//                    NSLog(@"three");
+//                    break;
+//                case 4:
+//                    NSLog(@"four");
+//                    break;
+//                case 5:
+//                    NSLog(@"five");
+//                    break;
+//                case 6:
+//                    NSLog(@"six");
+//                    break;
+//                case 7:
+//                    NSLog(@"seven");
+//                    break;
+//                case 8:
+//                    NSLog(@"eight");
+//                    break;
+//                case 9:
+//                    NSLog(@"nine");
+//                    break;
+//                case 0:
+//                    NSLog(@"zero");
+//                    break;  
+//                default:  
+//                    break;  
+//            }  
+//            number%=divider;  
+//            divider/=10;  
+//        }
+        Fraction *myFraction;
         
-        NSLog(@"Input number:");
-        scanf("%lli", &number);
-        divider = 1;
+        // 创建一个分数实例
         
-        while ((number/divider)>9) {
-            divider*=10;
-        }
-        while (divider>=1) {
-            switch (number/divider) {
-                case 1:
-                    NSLog(@"one");
-                    break;
-                case 2:
-                    NSLog(@"two");
-                    break;
-                case 3:
-                    NSLog(@"three");
-                    break;
-                case 4:
-                    NSLog(@"four");
-                    break;
-                case 5:
-                    NSLog(@"five");
-                    break;
-                case 6:
-                    NSLog(@"six");
-                    break;
-                case 7:
-                    NSLog(@"seven");
-                    break;
-                case 8:
-                    NSLog(@"eight");
-                    break;
-                case 9:
-                    NSLog(@"nine");
-                    break;
-                case 0:
-                    NSLog(@"zero");
-                    break;  
-                default:  
-                    break;  
-            }  
-            number%=divider;  
-            divider/=10;  
-        }
+        myFraction = [[Fraction alloc] init];
         
+        [myFraction setNumberator: 1];
+        [myFraction setDenominator: 3];
+        
+        // 使用打印方法显示分数
+        NSLog(@"The value of myFraction is:");
+        [myFraction print];
+
     }
     return 0;
 }

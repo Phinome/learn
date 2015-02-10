@@ -1,0 +1,24 @@
+
+/* Class = "IBUIBarButtonItem"; title = "Save"; ObjectID = "5Pb-dt-4sH"; */
+"5Pb-dt-4sH.title" = "Save";
+
+/* Class = "IBUINavigationController"; title = "Item List"; ObjectID = "5SO-Sb-Hzi"; */
+"5SO-Sb-Hzi.title" = "Item List";
+
+/* Class = "IBUINavigationItem"; title = "Todo List"; ObjectID = "BKa-HL-HJt"; */
+"BKa-HL-HJt.title" = "Todo List";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "Bt1-Ad-OiX"; */
+"Bt1-Ad-OiX.text" = "Title";
+
+/* Class = "IBUITextField"; placeholder = "New Todo Item"; ObjectID = "kKy-sF-dD9"; */
+"kKy-sF-dD9.placeholder" = "New Todo Item";
+
+/* Class = "IBUIBarButtonItem"; title = "+"; ObjectID = "lGm-Y2-Hb1"; */
+"lGm-Y2-Hb1.title" = "+";
+
+/* Class = "IBUINavigationItem"; title = "Add Todo Item"; ObjectID = "rhT-DW-oAo"; */
+"rhT-DW-oAo.title" = "Add Todo Item";
+
+/* Class = "IBUIBarButtonItem"; title = "Cancel"; ObjectID = "sqA-B6-3MF"; */
+"sqA-B6-3MF.title" = "Cancel";
