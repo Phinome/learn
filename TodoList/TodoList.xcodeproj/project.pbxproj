@@ -88,9 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				B051420D1A8797BF00FBD8E5 /* AppDelegate.h */,
+				B051420E1A8797BF00FBD8E5 /* AppDelegate.m */,
 				B051422F1A88B41E00FBD8E5 /* AddToDoItemViewController.h */,
 				B05142301A88B41E00FBD8E5 /* AddToDoItemViewController.m */,
-				B051420E1A8797BF00FBD8E5 /* AppDelegate.m */,
 				B05142131A8797BF00FBD8E5 /* Main.storyboard */,
 				B05142321A88B5A100FBD8E5 /* ToDoListTableViewController.h */,
 				B05142331A88B5A100FBD8E5 /* ToDoListTableViewController.m */,
