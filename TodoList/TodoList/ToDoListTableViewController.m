@@ -28,7 +28,7 @@
 }
 
 - (void)loadInitialData {
-    NSArray *itemArr = @[@"milk",@"eggs",@"drink",@"tea",@"water",@"paper"];
+    NSArray *itemArr = @[@"Buy milk",@"Buy eggs",@"Buy drink",@"Buy tea",@"Buy water",@"Buy paper"];
     int i;
     
     for (i = 0 ; i < [itemArr count]; i++) {

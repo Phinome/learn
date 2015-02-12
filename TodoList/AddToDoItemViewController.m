@@ -12,6 +12,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
+- (IBAction)textFieldDoneEditing:(UITextField *)sender;
+
+- (IBAction)backgroundTap:(id)sender;
+
 @end
 
 @implementation AddToDoItemViewController
@@ -44,4 +48,11 @@
     
 }
 
+- (IBAction)textFieldDoneEditing:(UITextField *)sender {
+    [sender resignFirstResponder];
+}
+
+- (IBAction)backgroundTap:(id)sender {
+    [self.textField resignFirstResponder];
+}
 @end
